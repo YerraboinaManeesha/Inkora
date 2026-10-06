@@ -1,0 +1,112 @@
+.articles-page {
+  padding: 56px 0 96px;
+}
+
+.articles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.articles-header h1 {
+  font-size: 2.2rem;
+  margin-top: 8px;
+}
+
+.articles-search {
+  display: flex;
+  gap: 10px;
+  min-width: 280px;
+}
+
+.articles-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.category-filter-label {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.category-filter-select {
+  width: auto;
+  min-width: 200px;
+  padding: 10px 36px 10px 14px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%236E5A62' stroke-width='1.4' fill='none' fill-rule='evenodd'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.category-filter-select:focus {
+  outline: none;
+  border-color: var(--accent-soft);
+}
+
+@media (max-width: 480px) {
+  .category-filter-select {
+    min-width: 0;
+    flex: 1;
+  }
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+.pagination button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-strong);
+  background: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.pagination button.is-active {
+  background: var(--accent);
+  color: var(--ivory);
+  border-color: var(--accent);
+}
+[data-theme='dark'] .pagination button.is-active {
+  color: var(--plum-strong);
+}
+
+@media (max-width: 900px) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+  .articles-search {
+    width: 100%;
+  }
+}

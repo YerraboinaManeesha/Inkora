@@ -1,0 +1,81 @@
+.profile-page {
+  padding: 56px 0 96px;
+  max-width: 900px;
+}
+
+.profile-page h1 {
+  font-size: 2.1rem;
+  margin: 10px 0 40px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.profile-card {
+  border: 1px solid var(--border);
+  padding: 28px;
+  background: var(--surface);
+}
+
+.profile-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+}
+
+.profile-card-hint {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 18px;
+}
+
+.profile-msg {
+  font-size: 0.85rem;
+  color: var(--success);
+  margin-bottom: 14px;
+}
+
+.swatches {
+  display: flex;
+  gap: 10px;
+}
+
+.swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.swatch.is-active {
+  border-color: var(--text);
+}
+
+.appearance-options {
+  display: flex;
+  gap: 10px;
+}
+
+.appearance-option {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid var(--border-strong);
+  background: none;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.appearance-option.is-active {
+  border-color: var(--rose);
+  color: var(--rose);
+}
+
+@media (max-width: 760px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}

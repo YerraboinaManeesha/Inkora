@@ -1,0 +1,54 @@
+.categories-page {
+  padding: 56px 0 96px;
+  max-width: 900px;
+}
+
+.categories-page h1 {
+  font-size: 2.2rem;
+  margin: 10px 0 16px;
+}
+
+.categories-intro {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  max-width: 560px;
+  margin-bottom: 48px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.category-card {
+  background: var(--bg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--text);
+  transition: background var(--transition);
+}
+
+.category-card:hover {
+  background: var(--surface);
+}
+
+.category-card h3 {
+  font-size: 1.3rem;
+}
+
+.category-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}

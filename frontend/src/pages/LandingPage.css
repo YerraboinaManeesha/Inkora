@@ -1,0 +1,135 @@
+.hero {
+  padding: 96px 0 64px;
+}
+
+.hero-inner {
+  max-width: 760px;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin: 18px 0 22px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.featured {
+  padding: 64px 0 24px;
+}
+
+.featured-inner .eyebrow {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  color: var(--text);
+}
+
+.featured-image {
+  aspect-ratio: 16 / 11;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-title {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  margin: 14px 0 16px;
+}
+
+.featured-desc {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  margin-bottom: 18px;
+}
+
+.featured-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: 8px;
+}
+
+.latest {
+  padding: 72px 0 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  font-size: 1.9rem;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
+}
+
+.categories-strip {
+  padding: 72px 0 96px;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.category-pill {
+  padding: 10px 20px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.category-pill:hover {
+  border-color: var(--accent-soft);
+  color: var(--rose);
+}
+
+@media (max-width: 900px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    padding: 56px 0 40px;
+  }
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+}
